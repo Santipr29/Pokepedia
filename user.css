@@ -29,19 +29,45 @@
     margin-left: 5%;
 }
 
-.search{
+/*comienza el buscador search*/
+
+#search{
     display: flex;
     text-align: center;
     background: white;
     border: 2px solid #000;
-    border-radius: 24px; 
     font-size: large;
     margin-left: -3%;
     height: 55%;
-    width: 12%;
-    margin-top: 1.7%;
+    width: 14%;
+    margin-top: 1.4%;
+    outline: 0;
     
 }
+
+#box-search{
+    position: fixed;
+    background-color: white;
+    margin-top: 3.4%;
+    margin-left: 5.2%;
+    width: 14.5%;
+    z-index: 2;
+    overflow: hidden;
+    display: none;
+
+}
+
+#box-search li a{
+    display: block;
+    color: #777777;
+    padding: 12px 20px;
+}
+
+#box-search li a:hover{
+    background-color: #f3f3f3;
+}
+
+/*sigue el nav*/
 
 .nav h2{
     display: flex;

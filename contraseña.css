@@ -52,7 +52,7 @@ body{
     justify-content: center;
     margin: 0 auto;
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     border-radius: 24px;
     width: 20%;
     background-color: #00444e;
@@ -64,4 +64,13 @@ body{
 .main a{
     display: flex;
     align-items: center;
+}
+
+.create{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    color: #000;
+    margin-bottom: 5%;
+    
 }

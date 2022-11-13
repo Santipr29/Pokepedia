@@ -29,19 +29,45 @@
     margin-left: 5%;
 }
 
-.search{
+/*comienza el buscador search*/
+
+#search{
     display: flex;
     text-align: center;
     background: white;
     border: 2px solid #000;
-    border-radius: 24px; 
     font-size: large;
     margin-left: -3%;
     height: 55%;
-    width: 12%;
-    margin-top: 1.7%;
+    width: 14%;
+    margin-top: 1.4%;
+    outline: 0;
     
 }
+
+#box-search{
+    position: fixed;
+    background-color: white;
+    margin-top: 3.4%;
+    margin-left: 5.2%;
+    width: 14.5%;
+    z-index: 2;
+    overflow: hidden;
+    display: none;
+
+}
+
+#box-search li a{
+    display: block;
+    color: #777777;
+    padding: 12px 20px;
+}
+
+#box-search li a:hover{
+    background-color: #f3f3f3;
+}
+
+/*sigue el nav*/
 
 .nav h2{
     display: flex;
@@ -67,15 +93,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 500px;
+
 }
 
 /*comienza los input de info*/
 
 .info{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
-    margin-top: 2%;
+    margin-top: 4%;
+    margin-bottom: 3%;
 }
 
 .content{
@@ -92,7 +122,7 @@
     margin-left: 40%;
 }
 
-.filter{
+#type{
     display: flex;
     text-align: center;
     justify-content: center;
@@ -103,60 +133,51 @@
     font-size: large;
 }
 
-/*comienza boton listo*/
-
-.container button{
+#videogame{
     display: flex;
     text-align: center;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 3%;
     border-radius: 24px;
-    width: 15%;
-    background-color: #8B0000;
+    background-color: #E0E0E0;
     border: 2px solid #000;
     font-size: large;
-    color: white;
 }
 
 /*comienza pokedex*/
 
-.pokedex{
+#pokedex{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 5%;
+    height: 100%;
+    margin-top: 3%;
     background-color: #313131;
+    overflow-x: auto;
 }
 
 .pokemon{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-left: 1%;
     margin-bottom: 1%;
-    width: 24%;
-    height: 100%;
 }
 
 .imag{
     background-color: #616161;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    align-items: center; 
 }
 
-.bulbasaur{
-    width: 90%;
-}
-
-.pikachu{
-    width: 62%;
-}
-
-.horsea{
-    width: 93%;
+.viewpoke{
+    min-height: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .name{
@@ -166,11 +187,17 @@
     margin: 0 auto;
 }
 
-.name h2{
+.name h3{
     color: white;
 }
 
 .name img{
-    width: 30%;
-    margin-left: 10%;
+    width: 25px;
+    margin-left: 5%;
+}
+
+.tipo{
+    color: #E0E0E0;
+    align-items: center;
+    text-align: center;
 }
