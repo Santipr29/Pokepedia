@@ -1,23 +1,43 @@
-const Cards = document.getElementById('Cards');
+const storagefav = window.localStorage
+const container = document.getElementById('Cards')
+const allPokemons = []
 
+async function getPokemon(url){
+    let response = await fetch(url);
+    let data = await response.json();
+    allPokemons.push(data)
+}
 
+let urlBase = 'https://pokeapi.co/api/v2/pokemon/'
 
+async function getAllPokemon(){
+    const loggedTrainer = storagefav.getItem("trainer")
+    const trainer = JSON.parse(loggedTrainer)
+    let fav = trainer.Favlist
+    for(i=0; i<fav.length;i++){
+        let url = urlBase + fav[i];
+        await getPokemon(url)
+    }
+    printpokemon(allPokemons)
+}
 
-for(let i=0; i<favoritos.length; i++){
-    let pokemon = new Pokeinfo(
-        favoritos[i].img, 
-        favoritos[i].name, 
-        favoritos[i].type, 
-        favoritos[i].description, 
-        favoritos[i].dates, 
-        favoritos[i].debility, 
-        favoritos[i].imgpre, 
-        favoritos[i].namepre, 
-        favoritos[i].imgevol1, 
-        favoritos[i].namevol1, 
-        favoritos[i].imgevol2, 
-        favoritos[i].namevol2, 
+function printpokemon(pokemons){
+    pokemons.forEach(pokemon => {
+        container.innerHTML += `
+    <div class="pokemon">
+        <div class="imag">
+                <img src="${pokemon.sprites.front_default}" class="viewpoke">
+            </div>
+            <div class="name">
+                <a href="pokemon.html?id=${pokemon.id}"><h3>${pokemon.name}</h3></a>
+                <img src="./Imagenes/starf.png" id="fav-${pokemon.id}" data-value="${pokemon.id}" onclick="Addpokefav(${pokemon.id})">
+            </div>
+            <div class="tipo">
+                <p>${pokemon.types[0].type.name}</p>
+        </div>
+    </div>
+    `;
+    });
+}
 
-    )
-    Cards.innerHTML += `<div>${pokemon.renderPokecardfavoritos()}</div>`;
-};
+getAllPokemon();

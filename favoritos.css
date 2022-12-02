@@ -71,7 +71,7 @@
     text-align: center;
     align-items: center;
     margin: 0 auto;
-    margin-left: 28.4%;
+    margin-left: 26.5%;
     color: white;
     font-size: xx-large;
 }
@@ -83,29 +83,30 @@
     margin-top: 9%;
     width: 55%;
 }
-.container{
-    display: flex;
-    flex-direction: row;
-}
+
 .var{
     background-color: #989797;
     width: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 680px;
+    height: 678px;
     margin-top: 0%;
     
 }
 
+.var a{
+    color: #000;
+}
+
 .top{
-    margin-top: 50%;
+    margin-top: 30%;
     display: flex;
     text-align: center;
 }
 
 .out{
-    margin-top: 175%;
+    margin-top: 260%;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -113,7 +114,6 @@
 
 .down{
     margin-left: -8%;
-    top: 400px;
 }
 .buscar{
     box-sizing: border-box;
@@ -153,30 +153,41 @@ margin-bottom: 100px;
 
 background: #D9D9D9;
 }
-#Cards{
+
+.container{
     display: flex;
     flex-direction: row;
+    height: 678px;
+}
+
+#Cards{
+    background-color: #989797;
+    display: grid;
+    overflow-y: scroll;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
-    gap: 30px;
-    margin-top: 70px;
-    margin-left: 30px;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
 }
 
 .pokemon{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     background-color: #606060;
     height: 250px;
     width: 150px;
     border-radius: 10px;
     padding: 10px;
+    margin-top: 7%;
+    margin-left: 7%;
+    margin-bottom: 7%;
     color: white;
 }
-.star{
-    width: 25px;
-}
+
 .viewpoke {
     min-width: 160px;
     max-width: 160px;
@@ -187,7 +198,18 @@ background: #D9D9D9;
 .name{
     display: flex;
     flex-direction: row;
-    gap: 20px;
     align-items: flex-end;
     color: white;
+}
+
+.name a{
+    color: white;
+}
+
+.name img{
+    width: 35px;
+}
+
+.tipo{
+    margin-top: 10%;
 }

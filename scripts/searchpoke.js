@@ -1,5 +1,22 @@
 var search = document.getElementById("search")
-var box_search = document.getElementById("box-search")
+let box_search = document.getElementById("box-search")
+const url = 'https://pokeapi.co/api/v2/pokemon/'
+
+for(let i=1; i<152; i++){
+    let pokeurl = url+i
+    getPokeName(pokeurl)
+
+}
+console.log(box_search)
+
+async function getPokeName(url){
+    await fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        
+        box_search.innerHTML += `<li><a href="pokemon.html?id=${data.id}">${data.name}</a></li>`;
+    });
+}
 
 document.getElementById("search").addEventListener("keyup", buscador_interno);
 

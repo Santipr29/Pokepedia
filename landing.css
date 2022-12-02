@@ -114,11 +114,13 @@ color: #FFFFFF;
     font-family: 'Krub';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 41px;
     line-height: 47px;
     text-align: center;
     
-    color: #FFFFFF;
+    color: #000000;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
 }    
 .Q_I{
     position: absolute;
@@ -187,10 +189,11 @@ color: #ffffff;
     display: flex;
     flex-direction: row;
     margin-top: 1000px;
-    width: 1800px;
-    margin-left: 100px;
-    gap: 30px;
+    width: 1500px;
+    margin-left: 10px;
+    gap: 50px;
     color: white;
+    justify-content: center;
 }
 
 #containerCreadores img{
@@ -286,10 +289,10 @@ border-radius: 25px;
 
 .Profe{
     position: absolute;
-width: 499px;
+width: 409px;
 height: 688px;
-left: 1101px;
-top: 2380px;
+left: 1041px;
+top: 2340px;
 
 }
 

@@ -12,7 +12,8 @@ function register(){
         email: email,
         name: name,
         contraseña: contraseña,
-        isLogged: false
+        isLogged: false,
+        Favlist: [],
     }
 
 
